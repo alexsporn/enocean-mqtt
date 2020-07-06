@@ -7,8 +7,7 @@ mqtt = require 'mqtt'
 Enocean = require './Enocean'
 
 enocean = new Enocean(port: config.port)
-console.log config
-client = mqtt.connect(config.mqtt, username: config.mqtt_username, password: config.mqtt_password)
+client = mqtt.connect(config.mqtt, username: config.mqtt_username, password: config.mqtt_password, keepalive: 3600)
 
 enocean.on 'pressed', (sender, button) =>
   console.log "enocean/#{sender}" + " - " + JSON.stringify {type: button}

@@ -16,7 +16,8 @@
 
   client = mqtt.connect(config.mqtt, {
     username: config.mqtt_username,
-    password: config.mqtt_password
+    password: config.mqtt_password,
+    keepalive: 3600
   });
 
   enocean.on('pressed', (sender, button) => {
