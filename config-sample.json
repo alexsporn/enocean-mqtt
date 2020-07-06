@@ -1,0 +1,6 @@
+{
+  "port": "/dev/ttyUSB0",
+  "mqtt": "mqtt://192.168.178.54:1883",
+  "mqtt_username": "username",
+  "mqtt_password": "password"
+}
